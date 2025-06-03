@@ -2,17 +2,25 @@
     "manifest_version": 3,
     "name": "YouTube Video Downloader",
     "version": "1.0",
-    "description": "Download YouTube videos by resolution",
+    "description": "Download YouTube videos in high quality.",
     "permissions": [
         "scripting",
-        "activeTab"
+        "activeTab",
+        "downloads",
+        "storage"
     ],
     "action": {
         "default_popup": "popup.html",
+        "default_title": "YouTube Video Downloader",
         "default_icon": {
             "16": "icon.png",
             "48": "icon.png",
             "128": "icon.png"
         }
-    }
+    },
+    "host_permissions": [
+        "https://youtube.com/*",
+        "https://www.youtube.com/*",
+        "https://youtube-downloader-api-ab5q.onrender.com/*"
+    ]
 }
